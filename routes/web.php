@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 
 Route::get('/',[MainController::class, "index"] );
-Route::post('/insert/',[MainController::class, "insert"]);
-Route::get('/mylogout/',[MainController::class, "logout"]);
+Route::post('/insert',[MainController::class, "insert"]);
+Route::get('/mylogout',[MainController::class, "logout"]);
 Route::get('/remove/{id}', [MainController::class, 'remove']);
 Route::get('/lotto/', function () {
     $lucky_number = rand(1, 49);
